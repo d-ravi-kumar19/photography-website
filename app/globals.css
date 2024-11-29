@@ -92,7 +92,7 @@ body {
   @apply text-muted-foreground text-lg mb-8 font-light;
 }
 
-.subtitle-title {
+.section-title {
   @apply text-4xl text-primary font-bold relative w-full flex items-center justify-between mb-8 gap-x-3;
 }
 
