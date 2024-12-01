@@ -18,7 +18,7 @@ const Logo = () => {
   }
 
   // Use light theme logo for "light" and dark theme logo for "dark"
-  const logo = theme === "dark" ? "/assets/white_logo.png" : "/assets/black_logo.png";
+  const logo = theme === "dark" ? "/assets/original-logo.png" : "/assets/original-logo-black.png";
 
   return (
     <div className="select-none">

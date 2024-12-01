@@ -18,6 +18,7 @@ body {
     --primary-foreground: 355 100% 97%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
+    --tertiary: 327 64% 97%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
     --accent: 240 4.8% 95.9%;
@@ -46,6 +47,7 @@ body {
     --primary-foreground: 240 5.9% 10%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
+    --tertiary: 327 64% 97%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
     --accent: 240 25% 7%;
@@ -93,7 +95,7 @@ body {
 }
 
 .section-title {
-  @apply text-4xl text-primary font-bold relative w-full flex items-center justify-between mb-8 gap-x-3;
+  @apply text-4xl text-primary font-bold relative w-full flex items-center justify-center mb-8 gap-x-3;
 }
 
 
@@ -119,3 +121,9 @@ body {
 .badge{
   @apply z-10 w-[250px] h-[90px] px-16 bg-primary dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-full flex items-center gap-x-4;
 }
+
+/* Apply bg-primary only to the swiper pagination bullets */
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply bg-primary;
+}
+

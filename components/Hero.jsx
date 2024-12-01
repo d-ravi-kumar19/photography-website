@@ -51,10 +51,11 @@ const Hero = () => {
         {/* Banner - right side */}
         <div className="hidden xl:flex lg:flex relative w-full md:w-1/2">
           <div className="flex justify-center md:justify-end w-full">
-            <HeroImg
-              imgSrc="/assets/hero-image.png"
-              containerStyle="w-full h-[450px] bg-no-repeat relative bg-bottom object-cover"
-            />
+          <HeroImg
+            imgSrc="/assets/hero-image.png"
+            containerStyle="w-full h-[450px] sm:h-[300px] md:h-[400px] xl:h-[550px] xl:w-[550px] lg:h-[450px] bg-no-repeat bg-cover"
+          />
+
           </div>
         </div>
       </div>
