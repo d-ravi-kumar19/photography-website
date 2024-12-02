@@ -8,7 +8,7 @@ const infoData = [
   },
   {
     icon: <RiSendPlaneFill size={20} />,
-    text: "+91 630 176 4614"
+    text: "+91 720 740 060XX"
   },
   {
     icon: <RiVidiconFill size={20} />,
@@ -18,15 +18,15 @@ const infoData = [
     icon: <RiRidingFill size={20} />,
     text: "Chintal, Kairathabad, Hyderabad"
   },
-  {
-    icon: <RiUserHeartFill size={20} />,
-    text: "Passionate Photographer"
-  },
+  // {
+  //   icon: <RiUserHeartFill size={20} />,
+  //   text: "Passionate Photographer"
+  // },
 ]
 
 const About = () => {
   return (
-    <section className="mb-12 lg:mb-24 mt-12">
+    <section className="mb-12 mnin-h-screen lg:mb-24 mt-12">
       <div className="container mx-auto">
         <h2 className="section-title mb-8 text-center">About Me</h2>
 

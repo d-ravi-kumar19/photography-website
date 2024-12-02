@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between">
           <Socials 
             containerStyles="flex gap-x-6 mx-auto xl:mb-0 mb-4"
-            iconstyle="text-white text-[20px] transition-all dark:text-white hover:text-white dark:hover:text-white/50"
+            iconstyle="text-white text-[20px] transition-all dark:text-white hover:text-white/70 dark:hover:text-white/50"
           />
           <div className="text-white">
             Copyrigt &copy; 2024, All Rights Reserved
