@@ -1,6 +1,11 @@
+'use client'
+
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import Link from "next/link";
+
+// react awesome reveal animations
+import { Fade } from "react-awesome-reveal";
 
 // react-icons
 import { RiMenFill, RiBookmark3Fill, RiBodyScanFill,RiServiceFill } from "react-icons/ri";
@@ -16,48 +21,61 @@ const Hero = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
         {/* Left side content */}
         <div className="flex flex-col justify-between xl:mx-0 text-center xl:text-left lg:text-left w-full md:w-1/2">
-          <div className="text-sm uppercase text-primary mb-4 tracking-[4px]">
-            PhotoGraphy
-          </div>
-          <h1 className="h1 uppercase">Let's Make Magic</h1>
-          <p className="subtitle max-w-[590px] mt-4 mx-auto xl:mx-0 lg:mx-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            ut turpis nec lorem aliquam tincidunt.
-          </p>
-
-          {/* Subscribe Button */}
-          <div className="flex flex-col gap-y-3 w-full md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
-            <div className="flex w-full gap-x-4">
-              <label htmlFor="email-address" className="sr-only">
-                Email Address
-              </label>
-              <Input type="email" id="email" placeholder="Email" />
-              <Link href="/contact">
-                <Button>
-                  Subscribe
-                  <RiMenFill />
-                </Button>
-              </Link>
+          <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
+            <div className="text-sm uppercase text-primary mb-4 tracking-[4px]">
+              PhotoGraphy
             </div>
-          </div>
+          </Fade>
+         
+          <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+            <h1 className="h1 uppercase">Let's Make Magic</h1>  
+          </Fade>
 
-          {/* Socials */}
-          <Socials
-            containerStyles="flex gap-x-6 mx-auto xl:mx-0 lg:mx-0"
-            iconstyle="text-foreground text-[22px] hover:text-primary transition-all"
-          />
+          <Fade direction="up" delay={800} cascade damping={1e-1} triggerOnce={true}>
+            <p className="subtitle max-w-[590px] mt-4 mx-auto xl:mx-0 lg:mx-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              ut turpis nec lorem aliquam tincidunt.
+            </p>
+          </Fade>
+
+          <Fade direction="up" delay={1000} cascade damping={1e-1} triggerOnce={true}>
+            {/* Subscribe Button */}
+            <div className="flex flex-col gap-y-3 w-full md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
+                <div className="flex w-full gap-x-4">
+                  <label htmlFor="email-address" className="sr-only">
+                    Email Address
+                  </label>
+                  <Input type="email" id="email" placeholder="Email" />
+                  <Link href="/contact">
+                    <Button>
+                      Subscribe
+                      <RiMenFill />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+          </Fade>
+
+          <Fade direction="up" delay={1200} cascade damping={1e-1} triggerOnce={true}>
+            {/* Socials */}
+            <Socials
+                  containerStyles="flex gap-x-6 mx-auto xl:mx-0 lg:mx-0"
+                  iconstyle="text-foreground text-[22px] hover:text-primary transition-all"
+                />
+          </Fade>
         </div>
-
-        {/* Banner - right side */}
-        <div className="hidden xl:flex lg:flex relative w-full md:w-1/2">
-          <div className="flex justify-center md:justify-end w-full">
-          <HeroImg
-            imgSrc="/assets/hero-image.png"
-            containerStyle="w-full h-[450px] sm:h-[300px] md:h-[400px] xl:h-[550px] xl:w-[550px] lg:h-[450px] bg-no-repeat bg-cover"
-          />
-
-          </div>
-        </div>
+        <Fade direction="right" delay={600} cascade damping={1e-1} triggerOnce={true}>
+           {/* Banner - right side */}
+            <div className="hidden xl:flex lg:flex relative w-full">
+              <div className="flex justify-center md:justify-end w-full">
+              <HeroImg
+                imgSrc="/assets/hero-image.png"
+                containerStyle="w-full h-[450px] sm:h-[250px] md:h-[300px] xl:h-[450px] xl:w-[450px] lg:w-[450px] lg:h-[450px] bg-no-repeat bg-cover"
+              />
+              </div>
+            </div>
+        </Fade>
+       
       </div>
 
       {/* Badge Section */}

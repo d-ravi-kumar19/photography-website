@@ -15,6 +15,8 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { Fade } from "react-awesome-reveal";
+
 const reviewsData = [
   {
     avatar: "/assets/reviews/1.png",
@@ -52,10 +54,13 @@ const Reviews = () => {
   return (
     <section className="mb-12 xl:mb-32 lg:mb-32">
       <div className="container mx-auto">
-        <h2 className="section-title mb-12 text-center mx-auto">
-          They say about my work
-        </h2>
+        <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
+          <h2 className="section-title mb-12 text-center mx-auto">
+            They say about my work
+          </h2>
+        </Fade>
         <div>
+        <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
           <Swiper
             slidesPerView={1}
             breakpoints={{
@@ -93,6 +98,7 @@ const Reviews = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </Fade>
         </div>
       </div>
     </section>

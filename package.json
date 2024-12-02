@@ -14,6 +14,7 @@
     "react-dom": "$react-dom"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.5",
     "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-accordion": "^1.2.1",
@@ -30,6 +31,7 @@
     "next": "15.0.3",
     "next-themes": "^0.4.3",
     "react": "19.0.0-rc-66855b96-20241106",
+    "react-awesome-reveal": "^4.2.14",
     "react-countup": "^6.5.3",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-hook-form": "^7.53.2",

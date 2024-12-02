@@ -1,4 +1,6 @@
+'use client'
 import ProjectCard from "./ProjectCard";
+import { Fade } from "react-awesome-reveal";
 
 const projectData = [
   {
@@ -48,15 +50,19 @@ const Gallery = () => {
   return (
     <section className="relative mb-12 xl:mb-48 lg:mb-48">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
-          My Gallery
-        </h2>
+        <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
+          <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
+            My Gallery
+          </h2>
+        </Fade>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          {projectData.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
+          <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+            {projectData.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </Fade>
         </div>
       </div>
     </section>

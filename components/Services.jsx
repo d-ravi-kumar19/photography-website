@@ -1,6 +1,8 @@
+'use client'
+
 import { Smile, Scan, Bird } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
+import { Fade } from 'react-awesome-reveal';
 // Services data
 const serviceData = [
   {
@@ -22,37 +24,40 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <section className="mb-12 xl:mb-36 lg:mb-36">
+    <section className="mb-12 mt-24 xl:mb-36 lg:mb-36">
       <div className="container mx-auto px-6">
-        <h2 className="section-title mb-12 text-3xl font-extrabold">
-          Our Services
-        </h2>
+        <Fade direction="up" delay={400} cascade damping={1e-1} triggerOnce={true}>
+          <h2 className="section-title mb-12 text-3xl font-extrabold">
+            Our Services
+          </h2>
+        </Fade>
 
       {/* Categories */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 lg:grid-cols-3 gap-y-12 lg:gap-y-24 lg:gap-x-6 justify-items-center">
-        {serviceData.map((item, index) => (
-          <Card
-            key={index}
-            className="relative w-full max-w-[425px] flex flex-col items-center justify-center pb-10  hover:bg-tertiary dark:hover:bg-white/10  transition-all duration-700 cursor-pointer"
-          >
-            <CardHeader className="mb-6">
-              <div className="w-[80px] h-[80px] bg-primary text-white rounded-full flex items-center justify-center absolute -bottom-6 right-6 mx-auto">
-                {item.icon}
-              </div>
-            </CardHeader>
-            <CardContent className="text-center">
-              <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
-                {item.title}
-              </CardTitle>
-              <CardDescription className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-                {item.description || "No description available."}
-              </CardDescription>
-            </CardContent>
-          </Card>
+        <Fade direction="up" delay={600} cascade damping={1e-1} triggerOnce={true}>
+          {serviceData.map((item, index) => (
+            <Card
+              key={index}
+              className="relative w-full max-w-[425px] flex flex-col items-center justify-center pb-10  hover:bg-tertiary dark:hover:bg-white/10  transition-all duration-700 cursor-pointer"
+            >
+              <CardHeader className="mb-6">
+                <div className="w-[80px] h-[80px] bg-primary text-white rounded-full flex items-center justify-center absolute -bottom-6 right-6 mx-auto">
+                  {item.icon}
+                </div>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
+                  {item.title}
+                </CardTitle>
+                <CardDescription className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+                  {item.description || "No description available."}
+                </CardDescription>
+              </CardContent>
+            </Card>
 
-        ))}
+          ))}
+        </Fade>
       </div>
-
       </div>
     </section>
   );
